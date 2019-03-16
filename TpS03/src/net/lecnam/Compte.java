@@ -50,14 +50,14 @@ public class Compte {
 	
 	public float crediter(float a) {
 		
-		solde = solde + a;
+		solde += a;
 		
 		return solde;
 	}
 	
 	public float retirer (float a) {
 		
-		solde = solde - a;
+		solde -= a;
 		
 		return solde;	
 	}

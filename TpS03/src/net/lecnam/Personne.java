@@ -36,11 +36,12 @@ public class Personne{
 		
 	}
 	
-	public void ouvrirCompte() {
+	public Compte ouvrirCompte() {
 		
 		Compte compte = new Compte(); // Creation de la nouvelle instance
 		this.listeDesComptes.add(compte); // "stockage" de l'instance Compte dans la liste
 		System.out.println(this.getPrenom() + this.getNom() + " ouvre le compte n° " + compte.getNumero());
+		return compte;
 	}
 	
 	public void fermerCompte( Compte leCompteAFermer) {
