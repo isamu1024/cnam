@@ -26,8 +26,11 @@ public class TpS03 {
 		montant = compte1.getSolde(); // Une personne consulte le solde d'un de ses comptes
 		
 		System.out.println("Solde du compte n° " + compte1.getNumero() + " solde = " + montant + " euros" );
+		
 		paul.fermerCompte(compte1); // Une personne ferme un compte.
+		
 		compte1= null ; // plus aucune reference au compte
+	
 
 	}
 

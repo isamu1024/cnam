@@ -44,9 +44,10 @@ public class Personne{
 		return compte;
 	}
 	
-	public void fermerCompte( Compte leCompteAFermer) {
+	public void fermerCompte(Compte leCompteAFermer) {
 		
 		this.listeDesComptes.remove(leCompteAFermer);
+		
 		return;
 	}
 	
