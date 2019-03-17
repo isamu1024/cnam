@@ -1,5 +1,7 @@
 package tri;
 
+import java.util.Arrays;
+
 public class TriABulle{
 
 
@@ -9,27 +11,25 @@ public class TriABulle{
 
 		boolean permut;
 		int indiceMax = tableau.length - 1;
-		int swap = 0;
-		int nombreDePermutation = 0;
-		int operation = 0;
-		
+		int swap = 0;		
 		do {
 			
 			permut = false;
 			
 			for ( int i = 1; i <= indiceMax; i++ ) { // j'ai buté une heure sur le non fonctionnement de la boucle car j'avais mis i == indiceMax (oui c'est idiot)
 				
-				operation++;
+				System.out.printf("%s \n","Balayage du tableau");
 				
 				if ( tableau[i-1] > tableau[i] ) {
 					
+					System.out.printf("%s %s %s %s \n","Permutation de l'index",tableau[i-1],"avec l'index",tableau[i]);	
 					swap = tableau[i-1];
 					tableau[i-1] = tableau[i];
 					tableau[i] = swap;
 					permut = true;
-					operation++;
-					nombreDePermutation ++;	
 					
+					Arrays.stream(tableau).forEach(l -> System.out.printf("%s:",l)); // https://stackoverflow.com/questions/36488806/using-printf-in-a-stream-in-java
+					System.out.printf("\n");
 				}	
 			}
 			
@@ -37,10 +37,10 @@ public class TriABulle{
 			
 		} while (permut == true);
 		
-		//System.out.println("Tableau trié en: " + nombreDePermutation +" opération(s)");
-		System.out.printf("%s %s %s %s %s \n", "Tableau trié en:", operation, "opération(s) et", nombreDePermutation, "permutation(s)");
 		return tableau;
 		
 	}
-
+	
 }
+
+

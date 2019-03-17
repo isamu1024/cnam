@@ -1,13 +1,15 @@
 /*
  * 
- * TP Seance 04 NFP136
+ * TP Séance 04 NFP136
  * https://github.com/isamu1024/cnam/tree/master/TpS04
  * 
  * 
- * Génération de liste aléatoire : https://www.random.org/integer-sets/
+ * Génération de listes aléatoires : https://www.random.org/integer-sets/
  * 
  * 
  */
+
+//TODO Commenter les différentes étapes des méthodes de tri
 
 package tri;
 
@@ -24,9 +26,13 @@ public class MethodePrincipale {
 		
 		int tab1[] = tableau();
 		
+		System.out.printf("\n%S \n\n","Tableau initial non trié");
+		
 		afficher(tab1);
 		
 		TriABulle.triBulle(tab1);
+		
+		System.out.printf("\n%S \n\n","Tableau final trié");
 		
 		afficher(tab1);
 		
@@ -56,17 +62,32 @@ public class MethodePrincipale {
 		
 		afficher(tab3);
 		
-		TriParSelection.triParSelection(tab2);
+		TriParSelection.triParSelection(tab3);
 		
 		afficher(tab3);
 		
-		System.out.printf("\n \n \n");			
+		System.out.printf("\n \n \n");
+		
+		
+		//Méthode tri de Shell
+		
+		System.out.printf("%s \n", "Méthode tri de Shell");		
+		
+		int tab4[] = tableau();
+		
+		afficher(tab4);
+		
+		TriDeShell.triDeShell(tab4);
+		
+		afficher(tab4);
+		
+		System.out.printf("\n \n \n");
 		
 	}
 	
 	private static int[] tableau() {
 		
-		int[] tableau = new int[] {283, 196, 752, 162, 193, 467, 154, 681, 352, 582, 372, 500, 631, 390, 44, 532, 313, 785, 208, 231, 169, 438, 747, 580, 629, 12, 881, 734, 841, 100, 624};
+		int[] tableau = new int[] {9, 4, 13, 5, 1, 3};
 		
 		return tableau;
 		
@@ -74,6 +95,7 @@ public class MethodePrincipale {
 	
 	private static void afficher(int tableau[]) {
 		
+	
 		Arrays.stream(tableau).forEach(i -> System.out.printf("%s:",i)); // https://stackoverflow.com/questions/36488806/using-printf-in-a-stream-in-java
 		
 		System.out.printf("\n");
