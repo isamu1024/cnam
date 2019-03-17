@@ -1,0 +1,34 @@
+felix est un chat de type européen. 
+(méthode Mammifere.boireduLait()) ,c'est un mammifère et peut boire du lait. 
+(méthode Chat.signeParticulier() ) il a comme particularité de ronronner
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
+Garfield est un chat de goutière. 
+(méthode Mammifere.boireduLait()) , c'est un mammifère mais nous ne savons pas si il ou elle peut boire du lait. 
+(méthode Chat.signeParticulier() ) il a comme particularité de ronronner
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
+Némo est un poisson clown. 
+(méthode Poisson.signeParticulier()) il a comme particularité d'avoir 2 nageoires.
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
+Marko Ramius est un poisson de classe typhon. 
+(méthode Poisson.signeParticulier()) il n'a pas de nagoire et dispose surement d'un système hydrodynamique sous voute, dit "la chenille" .
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
+Moby Dick est une baleine bleue. 
+(méthode Mammifere.boireduLait()) c'est un mammifère mais ne peut pas boire de lait. 
+(méthode Baleine.nager()) il a comme particularité de pouvoir nager comme son ami mammifère le dauphin.
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
+Monstro est une baleine cellulo. 
+(méthode Mammifere.boireduLait()) c'est un mammifère mais ne peut pas boire de lait. 
+(méthode Baleine.nager()) il a comme particularité de pouvoir nager comme son ami mammifère le dauphin.
+(méthode Animal.naitre()) il va naitre . 
+(méthode Animal.mourir()) il va malheureusement mourir,pauvre bête. 
+
