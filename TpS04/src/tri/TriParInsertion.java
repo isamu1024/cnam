@@ -8,9 +8,7 @@ public class TriParInsertion {
 			
 			System.out.printf("%s \n","Entrée dans la fonction triParInsertion");			
 			
-			for (int i = 1; i <= tableau.length -1; i++) {
-				
-				//System.out.printf("%s \n","Balayage du tableau");				
+			for (int i = 1; i <= tableau.length -1; i++) {		
 				
 				int valIns = tableau[i];
 				
