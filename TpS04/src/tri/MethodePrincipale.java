@@ -65,9 +65,13 @@ public class MethodePrincipale {
 		
 		int tab3[] = tableau();
 		
+		System.out.printf("\n%S \n\n","Tableau initial non trié");
+		
 		afficher(tab3);
 		
 		TriParSelection.triParSelection(tab3);
+		
+		System.out.printf("\n%S \n\n","Tableau final trié");
 		
 		afficher(tab3);
 		
