@@ -40,14 +40,19 @@ public class MethodePrincipale {
 		
 		
 		//Méthode tri par insertion
+		 
 		
 		System.out.printf("%s \n", "Méthode tri par insertion");
 
 		int tab2[] = tableau();
 		
+		System.out.printf("\n%S \n\n","Tableau initial non trié");
+		
 		afficher(tab2);
 		
 		TriParInsertion.triParInsertion(tab2);
+		
+		System.out.printf("\n%S \n\n","Tableau final trié");
 		
 		afficher(tab2);
 		
@@ -96,7 +101,7 @@ public class MethodePrincipale {
 	private static void afficher(int tableau[]) {
 		
 	
-		Arrays.stream(tableau).forEach(i -> System.out.printf("%s:",i)); // https://stackoverflow.com/questions/36488806/using-printf-in-a-stream-in-java
+		Arrays.stream(tableau).forEach(l -> System.out.printf("%s:", l)); // https://stackoverflow.com/questions/36488806/using-printf-in-a-stream-in-java
 		
 		System.out.printf("\n");
 			

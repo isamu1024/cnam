@@ -22,7 +22,7 @@ public class TriABulle{
 				
 				if ( tableau[i-1] > tableau[i] ) {
 					
-					System.out.printf("%s %s %s %s \n","Permutation de l'index",tableau[i-1],"avec l'index",tableau[i]);	
+					System.out.printf("%s %s %s %s \n","Permutation de la valeur",tableau[i-1],"avec la valeur",tableau[i]);	
 					swap = tableau[i-1];
 					tableau[i-1] = tableau[i];
 					tableau[i] = swap;

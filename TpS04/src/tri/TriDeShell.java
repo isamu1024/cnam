@@ -6,12 +6,14 @@ public class TriDeShell {
 	
 	static int[] triDeShell (int tableau[]) {
 		
-		System.out.printf("%s \n","Entrée dans la fonction triParSelection");
+		System.out.printf("%s \n","Entrée dans la fonction tri de shell");
 		
 		int pas = 0;
+		int valIns =0;
 		
 		while (pas < tableau.length) {
-			pas = (pas * 3) +1;
+			
+			pas = (pas*3) +1;
 			
 		}
 		
@@ -24,16 +26,17 @@ public class TriDeShell {
 			
 			for (int i = pas; i <= tableau.length - 1; i++) {
 				
-				int valIns = tableau[i];
+				valIns = tableau[i];
 				
 				int j = i;
 				
-				do {
-					// j'ai eu une erreur ici, le premier élément du tableau n'était pas trié, car je faisais un while simple qui n'éxécutait pas une première fois le code
+				while (j > pas - 1 && tableau[j - pas] > valIns) {  // solution de la première valeur non triée reprise de la réponse de Gabriel Bouty (merci à lui) 
+					
 					tableau[j] = tableau[j - pas];
+					
 					j = j - pas;
 						
-				} while (j > pas && tableau[j - pas] > valIns);
+				} 
 				
 				tableau[j] = valIns;
 			}
