@@ -14,14 +14,20 @@ public class TriDeShell {
 		while (pas < tableau.length) {
 			
 			pas = (pas*3) +1;
-			
+		
 		}
 		
+		System.out.printf("%s %s \n","Plus grand pas trouvé après premier dépassement de la longueur du tableau:",pas);
+		
 		pas = pas / 3;
+		
+		System.out.printf("%s %s \n","Pas retenu:",pas);
 		
 		while ( pas > 1) {
 			
 			pas = pas / 3;
+			
+			System.out.printf("%s %s \n","pas courant:",pas);
 			
 			
 			for (int i = pas; i <= tableau.length - 1; i++) {

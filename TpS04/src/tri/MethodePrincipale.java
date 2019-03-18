@@ -84,9 +84,13 @@ public class MethodePrincipale {
 		
 		int tab4[] = tableau();
 		
+		System.out.printf("\n%S \n\n","Tableau initial non trié");
+		
 		afficher(tab4);
 		
 		TriDeShell.triDeShell(tab4);
+		
+		System.out.printf("\n%S \n\n","Tableau final trié");
 		
 		afficher(tab4);
 		
@@ -96,7 +100,7 @@ public class MethodePrincipale {
 	
 	private static int[] tableau() {
 		
-		int[] tableau = new int[] {9, 4, 13, 5, 1, 3};
+		int[] tableau = new int[] {5, 10, 1, 3, 7, 4, 2, 6, 9, 8};
 		
 		return tableau;
 		

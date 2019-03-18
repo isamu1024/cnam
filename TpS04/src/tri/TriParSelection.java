@@ -21,9 +21,8 @@ public class TriParSelection {
 								
 				}
 				
-
-				
 			}
+			
 			System.out.printf("%s %s\n","Plus petite valeur trouvée dans la partie non triée:",tableau[indMinPartieNonTriee]);
 			swap = tableau[i];
 			tableau[i] = tableau[indMinPartieNonTriee];
