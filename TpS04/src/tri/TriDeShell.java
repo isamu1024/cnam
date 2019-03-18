@@ -21,7 +21,7 @@ public class TriDeShell {
 		
 		pas = pas / 3;
 		
-		System.out.printf("%s %s \n","Pas retenu:",pas);
+		System.out.printf("%s %s \n","Pas courant:",pas);
 		
 		while ( pas > 1) {
 			
@@ -33,10 +33,10 @@ public class TriDeShell {
 			for (int i = pas; i <= tableau.length - 1; i++) {
 				
 				valIns = tableau[i];
-				
+					
 				int j = i;
 				
-				while (j > pas - 1 && tableau[j - pas] > valIns) {  // solution de la première valeur non triée reprise de la réponse de Gabriel Bouty (merci à lui) 
+				while (j > pas - 1 && tableau[j - pas] > valIns) {  // solution de la première valeur non triée reprise du TP de Gabriel Bouty (merci à lui) 
 					
 					tableau[j] = tableau[j - pas];
 					
@@ -46,7 +46,7 @@ public class TriDeShell {
 				
 				tableau[j] = valIns;
 			}
-			
+						
 		}
 		
 		return tableau;
