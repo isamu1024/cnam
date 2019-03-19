@@ -36,7 +36,7 @@ public class TriDeShell {
 					
 				int j = i;
 				
-				while (j > pas - 1 && tableau[j - pas] > valIns) {  // solution de la première valeur non triée reprise du TP de Gabriel Bouty (merci à lui) 
+				while (j >= pas && tableau[j - pas] > valIns) {  // solution de la première valeur non triée reprise du TP de Gabriel Bouty (merci à lui) 
 					
 					tableau[j] = tableau[j - pas];
 					
