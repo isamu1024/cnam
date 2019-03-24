@@ -1,3 +1,5 @@
+// méthode de manipulation de tableau en deux dimensions issue de la séance 4 (rappel de la NFP135)
+
 package methodes;
 
 public class Tableau {
