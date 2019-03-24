@@ -71,6 +71,7 @@ public class ImportFile {
 
 				} else {
 
+					// 0 n'apparaissant pas dans les solutions possibles, on l'utilise pour une case vide
 					current = current.replace('.', '0');  // String est une variable immuable, pour remplacer une valeur il faut passer par la fonction replace (swap de char)
 
 					System.out.println(current);
