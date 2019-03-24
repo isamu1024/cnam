@@ -14,13 +14,13 @@ import java.util.Scanner;
 public class ImportFile {
 
 
-	static void afficherGrille () {
+	static void afficherGrille (String fichier) {
 	
 	String current;
 
 	try { 
 
-		Scanner sc = new Scanner(new File("test\\grille1.txt"));
+		Scanner sc = new Scanner(new File(fichier));
 
 
 		while (sc.hasNext()) {
