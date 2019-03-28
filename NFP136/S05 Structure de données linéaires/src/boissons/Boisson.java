@@ -1,3 +1,4 @@
+package boissons;
 
 public class Boisson {
 	

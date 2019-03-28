@@ -1,12 +1,12 @@
-
+package pile;
 
 public class Pile1 {
 	
 	public static void main(String[] args) {
 		
-		Character monTableauCar[] = new Character[100];
+		Character[] monTableauCar = new Character[100];
 		
-		Pile<Character> p01 = new PileTab01<Character>(monTableauCar, 25);
+		Pile<Character> p01 = new Piletab01<Character>(monTableauCar, 25);
 		
 		try {
 			
@@ -26,7 +26,7 @@ public class Pile1 {
 			try {
 				
 				p01 = p01.push(c);
-				System.out.println(" J'empile " + c + " sur p01 ");
+				System.out.println("J'empile " + c + " sur p01 ");
 				
 			}
 			
@@ -42,7 +42,7 @@ public class Pile1 {
 				
 				System.out.println("Sommet de p01 => " + p01.getTop() );
 				p01.pop();
-				System.out.println(" Je dépile p01 ! Vide p01 ? " + p01.estVide());
+				System.out.println("Je dépile p01 ! Vide p01 ? " + p01.estVide());
 				
 			}
 			try {
