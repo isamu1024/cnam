@@ -2,12 +2,14 @@ package intermédiaire;
 
 public class Task {
 
+	public String title;
 	public String description = "Description par defaut";
 	public boolean completed = false;
 	
-	public Task(String desc) {
+	public Task(String description, String title ) {
 		
-		description = desc;
+		this.title = title;
+		this.description = description;
 		
 	}
 	
