@@ -44,10 +44,16 @@ class PileVect<T> implements Pile<T> {
 
 	public Pile<T> pop() {
 
-		if (valeurs.isEmpty)
-		
-		
+		if (valeurs.isEmpty() == true) {
 			
+			throw new IllegalArgumentException("Pile Vide");
+			
+		} else {
+			
+			valeurs.remove(this.getTop());
+			return this;
+		}
+		
 	}
 	
 	
