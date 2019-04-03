@@ -26,7 +26,7 @@ public class Pile2 {
 			try {
 
 				p02 = p02.push(c);
-				System.out.println("J'empile " + c + " sur p01 ");
+				System.out.println("J'empile " + c + " sur p02 ");
 
 			}
 
