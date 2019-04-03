@@ -64,6 +64,17 @@ class Piletab01<T> implements Pile<T> {
 
 		}
 
+	}
+
+
+	public int getHight() {
+
+		int hight;
+		
+		hight = sommet + 1;
+		
+		return hight;
+		
 	}	
 
 }

@@ -17,6 +17,38 @@ class PileVect<T> implements Pile<T> {
 		return valeurs.isEmpty();
 		
 	}
+
+	
+	public Pile<T> push(T e) {
+
+		valeurs.addElement(e);
+		return this;
+		
+	}
+
+
+	public T getTop() {
+
+		if (valeurs.isEmpty() == true) {
+			
+			throw new IllegalArgumentException("Pile Vide");
+			
+		} else {
+			
+			return (this.valeurs).lastElement(); // retourne l'index de la dernière valeur à l'aide de la méthode lastElement 
+			
+		}
+		
+	}
+
+
+	public Pile<T> pop() {
+
+		if (valeurs.isEmpty)
+		
+		
+			
+	}
 	
 	
 
