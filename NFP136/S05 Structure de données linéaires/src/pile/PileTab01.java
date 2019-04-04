@@ -80,6 +80,8 @@ class Piletab01<T> implements Pile<T> {
 
 	public Pile<T> renverse() {
 		
+		// cas classique de permutation de valeurs dans un tableau
+		
 		int sommetTemp = sommet;
 		
 		for ( int i=0; i < sommetTemp; i++) {
@@ -92,13 +94,15 @@ class Piletab01<T> implements Pile<T> {
 			
 		}
 		
-		return this;
+		return this; // retourne la pile inversée
 		
 
 	}
 
 
 	public T afficher(int i) {
+		
+		// iniquement pour appeler la méthode afficher dans un sysout
 
 		return valeurs[i];
 			
