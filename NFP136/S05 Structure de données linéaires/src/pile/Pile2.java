@@ -39,22 +39,29 @@ public class Pile2 {
 			}
 
 		}
-		
+
 		System.out.println("la pile a une hauteur de: " + p02.getHight());
-		
-		
-		
-		p02.renverse();
-		
-		
-		
+
 		for ( int i = 0; i < p02.getHight(); i ++ ) {
-			
+
 			System.out.printf("%s ", p02.afficher(i));
-			
+
 		}
-		
-		
+
+		System.out.println();
+
+		p02.renverse();
+
+		System.out.println("la pile a une hauteur de: " + p02.getHight());
+
+		for ( int i = 0; i < p02.getHight(); i ++ ) {
+
+			System.out.printf("%s ", p02.afficher(i));
+		}
+
+		System.out.println();
+
+
 
 	}
 
