@@ -5,6 +5,8 @@ class Piletab01<T> implements Pile<T> {
 	private T[] valeurs;
 	private int limite;
 	private int sommet = -1;
+	T swap;
+	int hight;
 
 	public Piletab01( T[] tab, int maxi ) {
 
@@ -69,13 +71,38 @@ class Piletab01<T> implements Pile<T> {
 
 	public int getHight() {
 
-		int hight;
-		
 		hight = sommet + 1;
-		
+
 		return hight;
+
+	}
+
+
+	public Pile<T> renverse() {
 		
-	}	
+		int sommetTemp = sommet;
+		
+		for ( int i=0; i < sommetTemp; i++) {
+			
+			swap = valeurs[sommetTemp];
+			valeurs[sommetTemp] = valeurs[i];
+			valeurs[i] = swap;
+			
+			sommetTemp--;
+			
+		}
+		
+		return this;
+		
+
+	}
+
+
+	public T afficher(int i) {
+
+		return valeurs[i];
+			
+	}
 
 }
 
