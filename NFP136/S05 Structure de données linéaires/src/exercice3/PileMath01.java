@@ -2,8 +2,9 @@ package exercice3;
 
 public class PileMath01<T> implements Pile<T> {
 
-	T tab[];
-	int maxi;
+	private T tab[];
+	private int maxi;
+	private int sommet = -1;
 	
 	public PileMath01( T[] tab, int maxi ) { // constructeur de l'objet
 
@@ -13,13 +14,24 @@ public class PileMath01<T> implements Pile<T> {
 	
 		
 	public boolean estVide() {
-		// TODO Auto-generated method stub
-		return false;
+
+		return sommet == -1;
 	}
 
 	@Override
 	public Pile<T> push(T e) {
-		// TODO Auto-generated method stub
+		
+		if (sommet == limite -1 ) {
+
+			throw new IllegalArgumentException("Pile pleine !");
+
+		} else {
+
+			valeurs[++sommet] = e;
+
+			return this;
+
+		
 		return null;
 	}
 
