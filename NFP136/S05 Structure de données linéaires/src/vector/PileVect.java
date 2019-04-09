@@ -35,7 +35,7 @@ class PileVect<T> implements Pile<T> {
 			
 		} else {
 			
-			return (this.valeurs).lastElement(); // retourne l'index de la dernière valeur à l'aide de la méthode lastElement 
+			return valeurs.lastElement(); // retourne l'index de la dernière valeur à l'aide de la méthode lastElement 
 			
 		}
 		
