@@ -6,9 +6,10 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Logger name="MethodePrincipale" level="debug"/>
+    <Logger name="MethodePrincipale " level="debug"/>
     <Root level="trace">
       <AppenderRef ref="STDOUT"/>
     </Root>
+    <Logger name="TriDeShell" level="debug"></Logger>
   </Loggers>
 </Configuration>
