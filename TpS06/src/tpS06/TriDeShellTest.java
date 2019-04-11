@@ -1,5 +1,6 @@
 package tpS06;
 
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -39,6 +40,11 @@ public class TriDeShellTest {
 	public void testDeDureeDExecution() {
 		int[] tabTest5 = new int[] { 5, 10, 1, 3, 7, 4, 2, 6, 9, 8 };
 		TriDeShell.triDeShell(tabTest5);
+	}
+
+	@Test
+	public void test() {
+		fail("not yet implemented");
 	}
 
 }
