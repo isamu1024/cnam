@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="S05 Structure de données linéaires/src"/>
+	<classpathentry kind="src" path="S06 Introduction aux méthodes Agiles/src"/>
+	<classpathentry kind="src" path="S07RecursiviteEtComplexitéDesAlgorithmes/src"/>
+	<classpathentry kind="src" path="Sudoku/src"/>
+	<classpathentry kind="output" path="S05 Structure de données linéaires/bin"/>
+</classpath>
