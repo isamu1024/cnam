@@ -1,8 +1,15 @@
 package cours;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class MesArbresBin {
 
+	private static final Logger logger = LogManager.getLogger(MesArbresBin.class.getName());
+
 	public static void main(String[] args) {
+
+		logger.debug("Création des feuilles et des noeuds : ");
 
 		BinTree<Integer> a0 = new Feuille<Integer>();
 		BinTree<Integer> a2 = new Noeud<Integer>(2, a0, a0);
@@ -12,6 +19,7 @@ public class MesArbresBin {
 		BinTree<Integer> a1 = new Noeud<Integer>(1, a01, a4);
 
 		System.out.println("Taille de a1 : " + a1.taille());
+		logger.debug("Taille de a1 : " + a1.taille());
 		System.out.println("Hauteur de a1 : " + a1.hauteur());
 		System.out.println(a1.prefixe());
 		System.out.println(a1.infixe());
@@ -21,6 +29,12 @@ public class MesArbresBin {
 		for (int s : test) {
 			System.out.println(a1.isPresent(s));
 		}
+
+		// System.out.println(a1.minVal());
+		System.out.println(a1.minVal());
+		System.out.println(a1.maxVal());
+
+		a1.prefixeIteratif(a1);
 	}
 
 }

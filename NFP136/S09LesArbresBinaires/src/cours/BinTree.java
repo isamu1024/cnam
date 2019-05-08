@@ -32,4 +32,11 @@ public interface BinTree<T extends Comparable<T>> {
 
 	// Déterminer sur un élément se trouve dans une liste
 	Boolean isPresent(T x); // T type d'objet x valeur en paramètre
+
+	T minVal();
+
+	T maxVal();
+
+	void prefixeIteratif(BinTree<T> t);
+
 }
