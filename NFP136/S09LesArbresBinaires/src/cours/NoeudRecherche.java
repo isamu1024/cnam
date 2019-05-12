@@ -2,7 +2,7 @@ package cours;
 
 import java.util.Stack;
 
-public class Noeud<T extends Comparable<T>> implements BinTree<T> {
+public class NoeudRecherche<T extends Comparable<T>> implements BinTree<T> {
 
 	private T root;
 	private BinTree<T> left;
@@ -10,10 +10,12 @@ public class Noeud<T extends Comparable<T>> implements BinTree<T> {
 
 	// constructeur
 
-	public Noeud(T r, BinTree<T> g, BinTree<T> d) {
+	public NoeudRecherche(T r, BinTree<T> g, BinTree<T> d) {
+
 		root = r;
 		left = g;
 		right = d;
+
 	}
 
 	public boolean estVide() {
@@ -57,7 +59,6 @@ public class Noeud<T extends Comparable<T>> implements BinTree<T> {
 	}
 
 	public Boolean isPresent(T x) {
-
 		if (x.equals(root)) {
 			return true;
 		}
@@ -67,11 +68,9 @@ public class Noeud<T extends Comparable<T>> implements BinTree<T> {
 
 		return b1 ? b1 : b2; // booleanCondition ? executeThisPartIfBooleanConditionIsTrue :
 								// executeThisPartIfBooleanConditionIsFalse
-
 	}
 
 	public T minVal() {
-
 		T nodeData = root;
 		T leftNode = left.minVal();
 		T rightNode = right.minVal();
@@ -91,11 +90,9 @@ public class Noeud<T extends Comparable<T>> implements BinTree<T> {
 		}
 
 		return nodeData;
-
 	}
 
 	public T maxVal() {
-
 		T nodeData = root;
 		T leftNode = left.maxVal();
 		T rightNode = right.maxVal();
@@ -121,26 +118,67 @@ public class Noeud<T extends Comparable<T>> implements BinTree<T> {
 
 		Stack<BinTree<T>> s = new Stack<BinTree<T>>();
 
-		s.push(t); // on empile l'arbre passé en argument
+		s.push(t);
 
-		while (!s.isEmpty()) { // tant que le stack n'est pas vide
+		while (!s.isEmpty()) {
 
-			t = s.pop(); // on positionne l'arbre courant sur celui dépilé
+			t = s.pop();
 
-			if (t.racine() != null) { // j'ai du modifier dans feuille.java la méthode racine() pour qu'elle renvoie
-										// null au lieu d'une levée d'exception
-				System.out.println(t.racine()); // on l'affiche avec printf
+			if (t.racine() != null) {
+
+				System.out.println(t.racine());
+
 			}
 
-			if (t.sad() != null) { // on détecte si le sous arbre droit existe (l'ordre droite puis gauche a son
-									// importance)
-				s.push(t.sad()); // si oui on le pousse dans la pile
+			if (t.sad() != null) {
+
+				s.push(t.sad());
 			}
 
-			if (t.sag() != null) { // on détecte si le sous arbre gauche existe
-				s.push(t.sag()); // si oui on le pousse dans la pile
+			if (t.sag() != null) {
+				s.push(t.sag());
 			}
 		}
+
+	}
+
+	public BinTree<T> add(T x, BinTree<T> t) {
+
+		if (x.compareTo(t.racine()) == 0) {
+
+			return t;
+
+		}
+
+		if (x.compareTo(t.racine()) > 0) {
+
+			if (!sad().estVide()) {
+				right.add(x, right);
+			}
+
+			else {
+				BinTree<T> feuilleIns = new Feuille<T>();
+				BinTree<T> arbreIns = new NoeudRecherche<T>(x, feuilleIns, feuilleIns);
+				right = arbreIns;
+			}
+
+		}
+
+		if (x.compareTo(t.racine()) < 0) {
+
+			if (!sag().estVide()) {
+				right.add(x, right);
+			}
+
+			else {
+				BinTree<T> feuilleIns = new Feuille<T>();
+				BinTree<T> arbreIns = new NoeudRecherche<T>(x, feuilleIns, feuilleIns);
+				left = arbreIns;
+			}
+
+		}
+
+		return t;
 
 	}
 

@@ -35,6 +35,25 @@ public class MesArbresBin {
 		System.out.println(a1.maxVal());
 
 		a1.prefixeIteratif(a1);
+
+		System.out.println();
+
+		BinTree<Integer> b1 = new Feuille<Integer>();
+		BinTree<Integer> b2 = new NoeudRecherche<Integer>(2, b1, b1);
+		b2.add(2, b2);
+		b2.add(4, b2);
+		b2.add(7, b2);
+		b2.add(0, b2);
+		b2.add(1, b2);
+
+		System.out.println(b2.prefixe());
+		b2.prefixeIteratif(b2);
+
+		int test2[] = { 2, 4, 7, 0, 1, 3, 0, 4, 17, 4 };
+		for (int s : test2) {
+			System.out.println(b2.isPresent(s));
+		}
+
 	}
 
 }

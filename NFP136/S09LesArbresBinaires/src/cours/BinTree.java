@@ -39,4 +39,6 @@ public interface BinTree<T extends Comparable<T>> {
 
 	void prefixeIteratif(BinTree<T> t);
 
+	BinTree<T> add(T x, BinTree<T> t);
+
 }

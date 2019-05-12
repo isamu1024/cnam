@@ -56,7 +56,13 @@ public class Feuille<T extends Comparable<T>> implements BinTree<T> { // type gé
 	}
 
 	public void prefixeIteratif(BinTree<T> t) {
+
+	}
+
+	public BinTree<T> add(T x, BinTree<T> t) {
+
 		throw new IllegalArgumentException("C'est une feuille");
+
 	}
 
 }
